@@ -1,0 +1,20 @@
+{
+  "name": "kmu-library-mcp-worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "agents": "^0.5.0",
+    "cheerio": "^1.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.7.0",
+    "wrangler": "^4.0.0"
+  }
+}
