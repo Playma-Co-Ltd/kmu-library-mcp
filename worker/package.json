@@ -16,5 +16,10 @@
     "@types/node": "^25.3.0",
     "typescript": "^5.7.0",
     "wrangler": "^4.0.0"
+  },
+  "overrides": {
+    "agents": {
+      "@modelcontextprotocol/sdk": "1.32.2"
+    }
   }
 }
