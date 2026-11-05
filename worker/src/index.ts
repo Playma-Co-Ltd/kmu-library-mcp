@@ -57,10 +57,15 @@ const TABLE_PERIODS = ["學期期間", "寒暑假期間", "第二棟紀念大樓
 // --- MCP Agent ---
 
 export class KmuLibraryMCP extends McpAgent {
-  server = new McpServer({
-    name: "KMU Library (高雄醫學大學圖書資訊處)",
-    version: "0.1.0",
-  });
+  server = new McpServer(
+    {
+      name: "KMU Library (高雄醫學大學圖書資訊處)",
+      version: "0.1.0",
+    },
+    // GHSA-46jr-4wx8-v453: cap array elements + object keys validated per
+    // tool call; the SDK leaves this unlimited unless set.
+    { maxToolInputElements: 10_000 },
+  );
 
   async init() {
     // Tool 1: Library real-time status

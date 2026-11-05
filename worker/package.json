@@ -10,11 +10,16 @@
   "dependencies": {
     "agents": "^0.5.0",
     "cheerio": "^1.0.0",
-    "zod": "^3.24.0"
+    "zod": "^4.6.6"
   },
   "devDependencies": {
     "@types/node": "^25.3.0",
     "typescript": "^5.7.0",
     "wrangler": "^4.0.0"
+  },
+  "overrides": {
+    "agents": {
+      "@modelcontextprotocol/sdk": "1.32.2"
+    }
   }
 }
